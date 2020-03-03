@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  sql-server-db:
+    container_name: editorapp-db
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "editorapp"
+    volumes:
+      - ./data:/var/lib/postgresql/data

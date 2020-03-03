@@ -1,0 +1,24 @@
+server:
+  port: 5000
+
+spring:
+  datasource:
+#    url: jdbc:postgresql://editorappdb.cp9a4uvpoij3.us-east-2.rds.amazonaws.com:5432/editorapp
+    username: postgres
+    password: postgres
+  jpa:
+    generate-ddl: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+
+jwt:
+  token:
+    secret: JWTeDiToRaPp
+    expired: 32400000
+
