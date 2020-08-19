@@ -273,12 +273,12 @@ class UserManager extends React.Component {
                             </Button>
                             <TextField type='text'
                                        variant="outlined"
-                                       onChange={this.detectUserChange}
                                        label="Username"
                                        name='username'
+                                       autoComplete='off'
+                                       onChange={this.detectUserChange}
                                        value={this.state.selectedUser.username}
                                        className={classes.formItem}
-                                       autoComplete='off'
                             />
                             <TextField type='password'
                                        variant="outlined"

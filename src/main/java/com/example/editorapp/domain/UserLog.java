@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 @Data
@@ -28,7 +27,6 @@ public class UserLog {
     @JsonView(Views.UserLogView.class)
     private String userName;
 
-    @CollectionTable(name = "user_action", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     @JsonView(Views.UserLogView.class)
     private UserAction action;
